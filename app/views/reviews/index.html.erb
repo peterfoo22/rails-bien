@@ -1,0 +1,14 @@
+
+
+<p>the random number is <%= @number %> </p>
+
+<% @reviews.each do |review| %>
+
+  <div class = "reviews">
+
+    <%= link_to review.title, review_path(review) %>
+
+
+  </div>
+
+<% end %>

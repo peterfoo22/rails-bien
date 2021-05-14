@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsBien</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <h1>Beyond Review</h1>
+      <h2>Best Restaurant Reviews</h2>
+
+      <nav>
+        <%= link_to "Add a Review", new_review_path %>
+      </nav>
+    </header>
+    <%= yield %>
+    <footer>Copyright 2021</footer>
+  </body>
+</html>
