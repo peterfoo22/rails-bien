@@ -12,13 +12,16 @@
 
   <body>
     <header>
-      <h1>Beyond Review</h1>
-      <h2>Best Restaurant Reviews</h2>
+    <%= link_to root_path do %>
+      Bien Reviews
+      <%= image_tag 'bien-logo.svg' %>
+    <% end %>
 
       <nav>
         <%= link_to "Add a Review", new_review_path %>
       </nav>
     </header>
+
     <%= yield %>
     <footer>Copyright 2021</footer>
   </body>
