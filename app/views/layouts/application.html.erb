@@ -12,17 +12,22 @@
 
   <body>
     <header>
-    <%= link_to root_path do %>
-      Bien Reviews
-      <%= image_tag 'bien-logo.svg' %>
-    <% end %>
+      <nav>
+        <%= link_to root_path do %>
+          <%= image_tag 'bien-logo.svg' %>
+        <% end %>
+
+      </nav>
 
       <nav>
         <%= link_to "Add a Review", new_review_path %>
       </nav>
     </header>
 
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
+
     <footer>Copyright 2021</footer>
   </body>
 </html>
