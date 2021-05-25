@@ -15,7 +15,12 @@ class ReviewsController < ApplicationController
     @review = Review.new(form_params)
     @review.save
 
-    redirect_to root_path
+     if @review.save
+       redirect_to root_path
+     else
+       #show the view
+       render "new"
+     end
   end
 
   def show
@@ -40,7 +45,16 @@ class ReviewsController < ApplicationController
   def update
       @review = Review.find(params[:id])
       @review.update(params.require(:review).permit(:title, :body, :score))
-      redirect_to review_path(@review)
+
+      if @review.update(form_params)
+
+        redirect_to review_path(@review)
+      else
+
+       render "edit"
+
+      end
+
   end
 
   def form_params

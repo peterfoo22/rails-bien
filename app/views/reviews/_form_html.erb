@@ -1,11 +1,9 @@
-<h3>Add a New Restaurant Review</h3>
-
 <%= form_for @review do |f|  %>
 
 <% if @review.errors.any? %>
 
-  <div class = "errors">
-    <p> Please enter valid title</p>
+  <div> class = "errors">
+    <p> Title is no there</p>
     <p> Review has to be longer than 10 characters. </p>
   </div>
 
