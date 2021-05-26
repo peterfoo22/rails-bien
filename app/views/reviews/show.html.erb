@@ -2,9 +2,16 @@
 
 <div class = "score">
 
-  <%= @review.score  %>
+  <p><%= @review.score  %></p>
 
 </div>
+
+
+<% if @review.ambiance %>
+  <div class = "ambiance">
+    <span>Ambiance:</span>  <%= @review.ambiance %>
+  </div>
+<% end %>
 
 <div class = "body">
 
